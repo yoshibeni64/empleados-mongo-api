@@ -1,4 +1,4 @@
-Evidencia Semana 4 · lunes · 2026-09-28 13:43 · Rodrigo Benítez
+Evidencia Semana 4 · lunes · 2026-09-28 13:46 · Rodrigo Benítez
 
 ### docker compose ps
 empleados-dbgate  dbgate/dbgate:7.3.1  Up 2 hours
@@ -25,7 +25,8 @@ email {"email":1} UNICO
  compose.yaml                                       | 42 +++++++----
  evidencia/dia2/probar-crud.sh                      |  2 +-
  evidencia/s4-dia1/crud.txt                         | 83 ++++++++++++++++++++++
- evidencia/s4-dia1/mongo.txt                        |  0
+ evidencia/s4-dia1/evidencia.sh                     | 18 +++++
+ evidencia/s4-dia1/mongo.txt                        | 40 +++++++++++
  pom.xml                                            |  9 +--
  .../academia/empleados/config/OpenApiConfig.java   |  2 +-
  .../empleados/controller/EmpleadoController.java   |  6 +-
@@ -37,4 +38,4 @@ email {"email":1} UNICO
  .../empleados/repository/EmpleadoRepository.java   | 34 +++------
  .../empleados/service/EmpleadoService.java         | 22 +++---
  src/main/resources/application.properties          | 13 ++--
- 15 files changed, 223 insertions(+), 97 deletions(-)
+ 16 files changed, 281 insertions(+), 97 deletions(-)
