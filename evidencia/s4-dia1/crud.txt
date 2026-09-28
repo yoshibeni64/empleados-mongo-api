@@ -1,40 +1,40 @@
-Evidencia CRUD · 2026-09-28 13:45 · Rodrigo Benítez
+Evidencia CRUD · 2026-09-28 13:49 · Rodrigo Benítez
 
 ### 1. POST crea A → 201 + Location
 HTTP/1.1 201 
-Location: http://localhost:8080/api/empleados/6abac3f2b2fcf548119771b9
+Location: http://localhost:8080/api/empleados/6abac4e7b2fcf548119771bd
 Content-Type: application/json
 
-{"id":"6abac3f2b2fcf548119771b9","nombre":"PruebaA","apellidos":"Evidencia","email":"prueba.a.1790624754@empresa.com","puesto":"Tester","departamento":"Pruebas","salario":20000.00,"fechaIngreso":"2024-01-15","activo":true}
+{"id":"6abac4e7b2fcf548119771bd","nombre":"PruebaA","apellidos":"Evidencia","email":"prueba.a.1790624999@empresa.com","puesto":"Tester","departamento":"Pruebas","salario":20000.00,"fechaIngreso":"2024-01-15","activo":true}
 
 
 ### 2. POST crea B → 201
 HTTP/1.1 201 
-Location: http://localhost:8080/api/empleados/6abac3f2b2fcf548119771ba
+Location: http://localhost:8080/api/empleados/6abac4e7b2fcf548119771be
 Content-Type: application/json
 
-{"id":"6abac3f2b2fcf548119771ba","nombre":"PruebaB","apellidos":"Evidencia","email":"prueba.b.1790624754@empresa.com","puesto":"Tester","departamento":"Pruebas","salario":21000.00,"fechaIngreso":"2024-01-15","activo":true}
+{"id":"6abac4e7b2fcf548119771be","nombre":"PruebaB","apellidos":"Evidencia","email":"prueba.b.1790624999@empresa.com","puesto":"Tester","departamento":"Pruebas","salario":21000.00,"fechaIngreso":"2024-01-15","activo":true}
 
 
-### 3. GET por id (A=6abac3f2b2fcf548119771b9) → 200
+### 3. GET por id (A=6abac4e7b2fcf548119771bd) → 200
 HTTP/1.1 200 
 Content-Type: application/json
 
-{"id":"6abac3f2b2fcf548119771b9","nombre":"PruebaA","apellidos":"Evidencia","email":"prueba.a.1790624754@empresa.com","puesto":"Tester","departamento":"Pruebas","salario":20000.00,"fechaIngreso":"2024-01-15","activo":true}
+{"id":"6abac4e7b2fcf548119771bd","nombre":"PruebaA","apellidos":"Evidencia","email":"prueba.a.1790624999@empresa.com","puesto":"Tester","departamento":"Pruebas","salario":20000.00,"fechaIngreso":"2024-01-15","activo":true}
 
 
-### 4. PUT B=6abac3f2b2fcf548119771ba cambia puesto y salario → 200
+### 4. PUT B=6abac4e7b2fcf548119771be cambia puesto y salario → 200
 HTTP/1.1 200 
 Content-Type: application/json
 
-{"id":"6abac3f2b2fcf548119771ba","nombre":"PruebaB","apellidos":"Evidencia","email":"prueba.b.1790624754@empresa.com","puesto":"Lider","departamento":"Pruebas","salario":25000.00,"fechaIngreso":"2024-01-15","activo":true}
+{"id":"6abac4e7b2fcf548119771be","nombre":"PruebaB","apellidos":"Evidencia","email":"prueba.b.1790624999@empresa.com","puesto":"Lider","departamento":"Pruebas","salario":25000.00,"fechaIngreso":"2024-01-15","activo":true}
 
 
 ### 5. POST con el email de A → 409
 HTTP/1.1 409 
 Content-Type: application/problem+json
 
-{"detail":"Ya existe un empleado con el email prueba.a.1790624754@empresa.com","instance":"/api/empleados","status":409,"title":"Email duplicado"}
+{"detail":"Ya existe un empleado con el email prueba.a.1790624999@empresa.com","instance":"/api/empleados","status":409,"title":"Email duplicado"}
 
 
 ### 6. POST con datos inválidos → 400
@@ -67,7 +67,7 @@ HTTP/1.1 204
 HTTP/1.1 404 
 Content-Type: application/problem+json
 
-{"detail":"No existe un empleado con id 6abac3f2b2fcf548119771b9","instance":"/api/empleados/6abac3f2b2fcf548119771b9","status":404,"title":"Empleado no encontrado"}
+{"detail":"No existe un empleado con id 6abac4e7b2fcf548119771bd","instance":"/api/empleados/6abac4e7b2fcf548119771bd","status":404,"title":"Empleado no encontrado"}
 
 
 ### 11. DELETE B → 204
